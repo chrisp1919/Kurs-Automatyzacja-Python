@@ -20,10 +20,18 @@ def prime_factors(number):
     if number <= 1:
         return []
 
+    prime_factors_tab = []
+    divisor = 2
+
+    while number > 1:
+        while number % divisor == 0:
+            number = number / divisor
+            prime_factors_tab.append(divisor)
+        divisor += 1
+    return prime_factors_tab
+
 
 try:
     test_prime_factors()
 except AssertionError as e:
     print(e)
-
-
