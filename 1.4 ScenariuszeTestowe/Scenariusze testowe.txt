@@ -1,0 +1,208 @@
+(Happy path)
+1
+Nazwa: Utworzenie konta
+Opis: W wyniku procesu poprawnego tworzenia konta w systemie pojawia się nowy użytkownik.
+Typ: Funkcjonalny
+Prerekwizyty: Użytkownik nie posiada konta w systemie.
+
+1.1
+Nazwa: Poprawne tworzenie aktywnego konta.
+Opis: Użytkownik tworzy nowe konto przy użyciu poprawnych danych.
+Kroki:
+1. Użytkownik wchodzi na stronę główną komunikatora.
+2. Użytkownik klika przycisk "Stwórz nowe konto"
+3. Użytkownik wypełnia formularz rejestracji poprawnym loginem, hasłem, e-mailem.
+4. Użytkownik klika przycisk "Rejestruję"
+5. Użytkownik klika na otrzymany e-mail z linkiem aktywującym konto.
+Oczekiwania: 
+Konto zostaje pomyślnie utworzone, użytkownik widzi komunikat o pomyślnej rejestracji. Użytkownik dostaję wiadomość e-mail o poprawnym procesie tworzenia konta z linkiem aktywującym konto, po jego kliknięciu, konto zostaje aktywowane.
+
+2
+Nazwa: Logowanie
+Opis: Proces weryfikcji poprawnego logowania się w komunikatorze.
+Typ: Funkcjonalny
+Prerekwizyty: Użytkownik posiada konto w systemie.
+
+2.1
+Nazwa: Logowanie przy użyciu poprawnych danych.
+Opis: Użytkownik loguje się do systemu, przy użyciu poprawnych danych.
+Kroki:
+1. Użytkownik wchodzi na stronę głowną komunikatora.
+2. Użytkownik klika przycisk "Logowanie"
+3. Użytkownik wypełnia pola poprawnym loginem i hasłem.
+4. Użytkownik klika przycisk "Zaloguj się"
+Oczekiwania:
+Użytkownik zostaje zalogowany, widzi komunikat o poprawnym zalogowaniu oraz stronę główną komunikatora z fukcjami dostępnymi dla zalogowanych użytkowników.
+
+3. 
+Nazwa: Dodawanie użytkownika do znajomych.
+Opis: Proces weryfikacji poprawnego dodania innego użytkownika do znajomych w komunikatorze.
+Typ: Funkcjonalny
+Prerekwizyty: Użytkownik główny zalogowany w systemie. Znajomy posiada konto w systemie.
+
+3.1
+Nazwa: Poprawne dodanie użytkownika do znajomych.
+Opis: Użytkownik dodaje innego użytkownika do znajomych.
+Kroki: 
+1. Użytkownik klika przycisk "Wyszukaj znajomego"
+2. Użytkownik wyszukuje użytkownika którego chce dodać do znajomych, wprowadzając poprawną nazwę tego użytkownika.
+3. Użytkownik klika przycisk "Dodaj znajomego"
+Oczekiwania: 
+Użytkownik zostaje odnaleziony następnie poprawnie dodany do znajomych.
+
+4.
+Nazwa: Wysyłanie wiadomości.
+Opis: Użytkownik wysyła wiadomość do innego użytkownika.
+Typ: Funkcjonalny
+Prerekwizyty: Użytkownik główny zalogowany w systemie.
+
+4.1
+Nazwa: Poprawne wysłanie wiadomości do użytkownika.
+Opis: Użytkownik wysyła wiadomość do użytkownika.
+Kroki: 
+1. Użytkownik główny wyszukuje innego użytkownika, następnie prawym przyciskiem myszy lub klikając 2x na niego wybiera opcję "Wyślij wiadomość"
+2. W nowym oknie w polu tekstowym użytkownik wprowadza treść wiadomości i klika przycisk "Wyślij".
+Oczekiwania: 
+System wysyła wiadomość, użytkownik do którego wiadomość jest adresowana otrzymuję ją.
+
+
+
+(Unhappy path)
+1
+Nazwa: Nieudane utworzenie aktywnego konta
+Opis: W wyniku procesu nieudanego tworzenia konta w systemie nie pojawia się nowy użytkownik.
+Typ: Funkcjonalny
+Prerekwizyty: Użytkownik nie posiada konta w systemie.
+
+1.1
+Nazwa: Próba utworzenia konta przy braku internetu.
+Opis: Urzytkownik wykonuje probe utworzenia konta bez dostępu do internetu.
+Kroki:
+1. Użytkownik wykonuje probe uruchomienia strony z komunikatorem.
+Oczekiwania:
+Użytkownik otrzymuje komunikat o błędzie ładowania strony, z powodu braku dostępu do internetu.
+
+1.2
+Nazwa: Próba utworzenia konta przy użyciu niepoprawnych danych.
+Opis: Użytkownik tworzy nowe konto przy użyciu niepoprawnych danych.
+Kroki:
+1. Użytkownik wchodzi na stronę główną komunikatora.
+2. Użytkownik klika przycisk "Stwórz nowe konto"
+3. Użytkownik wypełnia formularz rejestracji niepoprawnym loginem, hasłem, e-mailem.
+4. Użytkownik klika przycisk "Rejestruję"
+Oczekiwania: 
+Konto nie zostaje utworzone, użytkownik widzi komunikat o niepoprawnej rejestracji z informacją o błędnym loginie, haśle lub adresie e-mail.
+
+1.3
+Nazwa: Próba utworzenia konta przy braku podania danych.
+Opis: Użytkownik tworzy nowe konto przy braku podania danych.
+Kroki:
+1. Użytkownik wchodzi na stronę główną komunikatora.
+2. Użytkownik klika przycisk "Stwórz nowe konto"
+3. Użytkownik nie wypełnia formularz rejestracji loginem, hasłem, e-mailem.
+4. Użytkownik klika przycisk "Rejestruję"
+Oczekiwania: 
+Konto nie zostaje utworzone, użytkownik widzi komunikat o niepoprawnej rejestracji z informacją o pustym polu login, hasło, adres e-mail.
+
+1.4
+Nazwa: Próba utworzenia konta przy braku internetu na etapie wysłania e-maila po rejestracji.
+Opis: Użytkownik pomyślnie tworzy konto ale nie aktywuje go e-mailem aktywacyjnym z powodu braku internetu.
+Kroki:
+1. Użytkownik wchodzi na stronę główną komunikatora.
+2. Użytkownik klika przycisk "Stwórz nowe konto"
+3. Użytkownik wypełnia formularz rejestracji poprawnym loginem, hasłem, e-mailem.
+4. Użytkownik klika przycisk "Rejestruję"
+5. Użytkownik sprawdza pocztę w celu odnalezienia maila z linkiem aktywującym konto.
+Oczekiwania: 
+Konto zostaje pomyślnie utworzone, użytkownik widzi komunikat o pomyślnej rejestracji. Użytkownik nie dostaję wiadomość e-mail o poprawnym procesie tworzenia konta z linkiem aktywującym konto, przez co nie może aktywować konto.
+
+2
+Nazwa: Niepoprawne logowanie
+Opis: Proces weryfikcji niepoprawnego logowania się w komunikatorze.
+Typ: Funkcjonalny
+Prerekwizyty: Użytkownik posiada konto w systemie.
+
+2.1
+Nazwa: Próba logowania przy braku internetu.
+Opis: Użytkownik wykonuje probe logowania na konto bez dostępu do internetu.
+Kroki:
+1. Użytkownik wchodzi na stronę głowną komunikatora.
+2. Użytkownik klika przycisk "Logowanie"
+Oczekiwania:
+Użytkownik otrzymuje komunikat o błędzie ładowania strony, z powodu braku dostępu do internetu.
+
+2.2
+Nazwa: Logowanie przy użyciu niepoprawnych danych.
+Opis: Użytkownik loguje się na konto, przy użyciu niepoprawnych danych.
+Kroki:
+1. Użytkownik wchodzi na stronę głowną komunikatora.
+2. Użytkownik klika przycisk "Logowanie"
+3. Użytkownik wypełnia pola niepoprawnym loginem i hasłem.
+4. Użytkownik klika przycisk "Zaloguj się"
+Oczekiwania:
+Użytkownik nie zostaje zalogowany, widzi komunikat o nie poprawnym zalogowaniu z powodu błędnego loginu lub hasła.
+
+2.3
+Nazwa: Logowanie przy braku podania danych.
+Opis: Użytkownik loguje się na konto przy braku podania danych.
+Kroki:
+1. Użytkownik wchodzi na stronę główną komunikatora.
+2. Użytkownik klika przycisk "Logowanie"
+3. Użytkownik nie wypełnia pola login i hasło.
+4. Użytkownik klika przycisk "Zaloguj się"
+Oczekiwania: 
+Użytkownik nie zostaje zalogowany, widzi komunikat o nie poprawnym zalogowaniu z powodu braku loginu i hasła.
+
+3. 
+Nazwa: Niepoprawne dodawanie użytkownika do znajomych.
+Opis: Proces weryfikacji niepoprawnego dodania innego użytkownika do znajomych w komunikatorze.
+Typ: Funkcjonalny
+Prerekwizyty: Użytkownik główny zalogowany w systemie. Znajomy użytkownik posiada konto w systemie.
+
+3.1
+Nazwa: Próba dodania nieistniejącego użytkownika
+Opis: Użytkownik wykonuje probe dodania nieistniejącego użytkownika do znajomych.
+Kroki: 
+1. Użytkownik klika przycisk "Wyszukaj znajomego"
+2. Użytkownik wprowadza niepoprawną nazwę tego użytkownika.
+Oczekiwania: 
+Użytkownik nie zostaje odnaleziony, brak możliwości dodania.
+
+3.2
+Nazwa: Dodanie użytkownika będącego już na liście znajomych .
+Opis: Użytkownik wykonuje probe dodania użytkownika, który już znajduje się na liście znajomych.
+Kroki: 
+1. Użytkownik klika przycisk "Wyszukaj znajomego".
+2. Użytkownik wyszukuje użytkownika którego chce dodać do znajomych, wprowadzając poprawną nazwę tego użytkownika.
+3. Użytkownik klika przycisk "Dodaj znajomego"
+Oczekiwania: Użytkownik widzi komunikat, mówiący o tym, że dany użytkownik już znajduje w znajomych.
+
+3.3
+Nazwa: Próba dodania wyszukania użytkownika przy braku dostępu do internetu.
+Opis: Użytkownik wykonuje probe wyszukania użytkownia przy braku dostępu do internetu
+Kroki: 
+1. Użytkownik klika przycisk "Wyszukaj znajomego"
+2. Użytkownik wprowadza poprawną nazwę tego użytkownika, ale system traci połączenie z serwerem.
+
+Oczekiwania: 
+Użytkownik nie zostaje odnaleziony z powodu braku dostępu do internetu.
+
+4.
+Nazwa: Wysyłanie wiadomości.
+Opis: Użytkownik wysyła wiadomość do innego użytkownika
+Typ: Funkcjonalny
+Prerekwizyty: Użytkownik główny zalogowany w systemie.
+
+4.1
+Nazwa: Nieudane wysłanie wiadomości do użytkownika z powodu utraty połączenia z internetem.
+Opis: Użytkownikowi nie udaje się wysłać wiadomość do innego użytkownika z powodu utraty w trakcie wysyłania wiadomości połączenia z internetem.
+Kroki: 
+1. Użytkownik główny wyszukuje innego użytkownika, następnie prawym przyciskiem myszy lub klikając 2x na niego wybiera opcję "Wyślij wiadomość"
+2. W nowym oknie w polu tekstowym użytkownik wprowadza treść wiadomości i klika przycisk "Wyślij", ale system traci połączenie z serwerem.
+Oczekiwania: 
+Użytkownik główny otrzymuje komunikat o błędzie połączenia oraz że wiadomość nie została dostarczona. Inny użytkownik nie otrzymuje wiadomości z powodu problemów z serwerem.
+
+
+
+
+
