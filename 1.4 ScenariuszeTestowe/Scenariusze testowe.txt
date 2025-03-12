@@ -175,7 +175,8 @@ Kroki:
 1. Użytkownik klika przycisk "Wyszukaj znajomego".
 2. Użytkownik wyszukuje użytkownika którego chce dodać do znajomych, wprowadzając poprawną nazwę tego użytkownika.
 3. Użytkownik klika przycisk "Dodaj znajomego"
-Oczekiwania: Użytkownik widzi komunikat, mówiący o tym, że dany użytkownik już znajduje w znajomych.
+Oczekiwania: 
+Użytkownik widzi komunikat, mówiący o tym, że dany użytkownik już znajduje w znajomych.
 
 3.3
 Nazwa: Próba dodania wyszukania użytkownika przy braku dostępu do internetu.
@@ -183,7 +184,6 @@ Opis: Użytkownik wykonuje probe wyszukania użytkownia przy braku dostępu do i
 Kroki: 
 1. Użytkownik klika przycisk "Wyszukaj znajomego"
 2. Użytkownik wprowadza poprawną nazwę tego użytkownika, ale system traci połączenie z serwerem.
-
 Oczekiwania: 
 Użytkownik nie zostaje odnaleziony z powodu braku dostępu do internetu.
 
