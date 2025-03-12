@@ -1,6 +1,8 @@
 def test_prime_factors():
     test_cases = {
         -10: [],    #przypadek szczególny, ujemna
+        0: [],
+        1: []
     }
 
     for number, tab in test_cases.items():
@@ -10,12 +12,11 @@ def test_prime_factors():
 
 
 def prime_factors(number):
-    pass
+    if number <= 1:
+        return []
 
 
 try:
     test_prime_factors()
 except AssertionError as e:
     print(e)
-
-
